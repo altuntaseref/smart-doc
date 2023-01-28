@@ -1,11 +1,10 @@
 package com.example.smartdoc.controller;
 
 import com.codoid.products.exception.FilloException;
-import com.example.smartdoc.dao.KongRepository;
 import com.example.smartdoc.model.EntityGeneratorModel;
-import com.example.smartdoc.service.ControllerGenerator;
-import com.example.smartdoc.service.DaoGenerator;
-import com.example.smartdoc.service.EntityGenerator;
+import com.example.smartdoc.service.generators.ControllerGenerator;
+import com.example.smartdoc.service.generators.DaoGenerator;
+import com.example.smartdoc.service.generators.EntityGenerator;
 import com.example.smartdoc.service.KongService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

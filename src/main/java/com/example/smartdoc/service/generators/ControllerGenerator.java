@@ -1,4 +1,4 @@
-package com.example.smartdoc.service;
+package com.example.smartdoc.service.generators;
 
 import com.example.smartdoc.model.EntityGeneratorModel;
 import freemarker.template.Configuration;
@@ -15,19 +15,19 @@ import java.util.HashMap;
 @Service
 @NoArgsConstructor
 @Slf4j
-public class DaoGenerator {
+public class ControllerGenerator {
 
     public Object execute(EntityGeneratorModel entityGeneratorModel) throws IOException {
 
 
         Configuration cfg = new Configuration(Configuration.DEFAULT_INCOMPATIBLE_IMPROVEMENTS);
-        String fileName = String.format( "C:\\BUSINESS\\privProject\\smart-doc\\smart-doc\\src\\main\\java\\com\\example\\smartdoc\\dao\\%sRepository.java",entityGeneratorModel.getAppName());
+        String fileName = String.format( "C:\\BUSINESS\\privProject\\smart-doc\\smart-doc\\src\\main\\java\\com\\example\\smartdoc\\controller\\%sController.java",entityGeneratorModel.getAppName());
         FileWriter myWriter = new FileWriter(fileName);
         HashMap<String, Object> args = new HashMap<>();
         args.put("appName",entityGeneratorModel.getAppName());
 
 
-        String templateFile ="src/main/resources/templates/dao.ftl";
+        String templateFile ="src/main/resources/templates/controller.ftl";
         Template template = cfg.getTemplate(templateFile);
         StringWriter stringWriter = new StringWriter();
         try{

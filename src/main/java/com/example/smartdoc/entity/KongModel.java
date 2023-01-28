@@ -1,4 +1,4 @@
-package com.example.smartdoc;
+package com.example.smartdoc.entity;
 
 import lombok.Data;
 
